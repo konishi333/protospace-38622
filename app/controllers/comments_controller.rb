@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
     else
       @prototype = Prototype.find(params[:prototype_id])
       @comment = Comment.new
+      @comments = @prototype.comments
       render "prototypes/show"
     end
   end
